@@ -1,0 +1,15 @@
+# Maven
+target/
+
+# NetBeans / IntelliJ / Eclipse / VS Code
+nbproject/private/
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.vscode/
+
+# He dieu hanh
+.DS_Store
+Thumbs.db
