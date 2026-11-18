@@ -1,6 +1,6 @@
 #  Phần mềm Quản lý Sinh viên
 
-Đồ án môn lập trình Java – ứng dụng desktop (Java Swing) kết nối cơ sở dữ liệu **SQL Server** để quản lý sinh viên, lớp, khoa, môn học, điểm và tài khoản.
+Đồ án môn lập trình Java – áp dụng Java Swing kết nối cơ sở dữ liệu **SQL Server** để quản lý thông tin sinh viên, lớp, khoa, môn học và điểm.
 
 - **Sinh viên thực hiện:** Trần Thị Huyền Trang
 - **Lớp:** TH30.21
