@@ -71,8 +71,6 @@ TaiKhoan (TenDangNhap PK, MatKhau, TenNguoiDung)
 
 Quan hệ: Khoa 1-n Lớp · Khoa 1-n Môn học · Lớp 1-n Sinh viên · Sinh viên 1-n Kết quả · Môn học 1-n Kết quả.
 
-Chi tiết xem file Word trong thư mục `docs/`.
-
 ### Tài khoản đăng nhập có sẵn
 
 | Tên đăng nhập | Mật khẩu |
