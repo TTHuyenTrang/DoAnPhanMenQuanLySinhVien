@@ -9,7 +9,7 @@ public class KetNoiSQLSever {
     private static final String PORT     = "1433";
     private static final String DATABASE = "QLSinhVien_HuyenTrang";
     private static final String USER     = "HuyenTrang";
-    private static final String PASSWORD = "Lantrang3112@"; // Điền mật khẩu của bạn vào đây
+    private static final String PASSWORD = "Lantrang3112@"; 
 
     public static Connection getConnection() throws SQLException {
         String url = "jdbc:sqlserver://" + SERVER + ":" + PORT
