@@ -38,7 +38,7 @@ QuanLySinhVien/
 │   ├──SQL_DoAnQuanLySinhVien.sql         # Tạo database + 6 bảng
 │   └──ThemDuLieu.sql         # Thêm dữ liệu cho các bảng
 ├── docs/
-│   └── ThietKe_CoSoDuLieu_QuanLySinhVien.docx   # Báo cáo thiết kế CSDL
+│   └── ThietKe_CoSoDuLieu_QuanLySinhVien.docx   # thiết kế CSDL
 └── src/main/java/qlsv/
     ├── Main.java                   # Điểm khởi chạy
     ├── db/
@@ -72,38 +72,6 @@ TaiKhoan (TenDangNhap PK, MatKhau, TenNguoiDung)
 Quan hệ: Khoa 1-n Lớp · Khoa 1-n Môn học · Lớp 1-n Sinh viên · Sinh viên 1-n Kết quả · Môn học 1-n Kết quả.
 
 Chi tiết xem file Word trong thư mục `docs/`.
-
-## 🚀 Hướng dẫn cài đặt và chạy
-
-### Bước 1: Chuẩn bị
-- Cài **JDK 11+** và **Maven** (hoặc dùng IDE NetBeans / IntelliJ đã có sẵn Maven).
-- Cài **SQL Server** + SQL Server Management Studio (SSMS).
-
-### Bước 2: Tạo database
-Mở SSMS, lần lượt chạy (Execute) 2 file:
-1. `database/01_create_tables.sql`
-2. `database/02_sample_data.sql`
-
-### Bước 3: Cấu hình kết nối
-Mở `src/main/java/qlsv/db/DBConnection.java` và sửa cho đúng máy của bạn:
-
-```java
-private static final String SERVER   = "localhost";
-private static final String PORT     = "1433";
-private static final String DATABASE = "QLSinhVien_HuyenTrang";
-private static final String USER     = "sa";
-private static final String PASSWORD = "123456";   // <-- đổi thành mật khẩu của bạn
-```
-
-### Bước 4: Chạy chương trình
-
-**Cách 1 – Dòng lệnh:**
-```bash
-mvn compile exec:java
-```
-
-**Cách 2 – IDE (NetBeans / IntelliJ / Eclipse):**
-Chọn *Open Project* → chọn thư mục dự án (nhận dạng là Maven project) → chuột phải `Main.java` → *Run*.
 
 ### Tài khoản đăng nhập có sẵn
 
