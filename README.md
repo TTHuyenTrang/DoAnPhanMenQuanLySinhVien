@@ -1,4 +1,4 @@
-# 🎓 Phần mềm Quản lý Sinh viên
+#  Phần mềm Quản lý Sinh viên
 
 Đồ án môn lập trình Java – ứng dụng desktop (Java Swing) kết nối cơ sở dữ liệu **SQL Server** để quản lý sinh viên, lớp, khoa, môn học, điểm và tài khoản.
 
@@ -7,7 +7,7 @@
 
 ---
 
-## 📌 Chức năng
+##  Chức năng
 
 | Tab | Chức năng |
 |-----|-----------|
@@ -21,13 +21,13 @@
 
 Mọi tab đều có: **Thêm, Sửa, Xóa, Làm mới, Tìm kiếm** (tìm theo bất kỳ cột nào). Các khóa ngoại (mã khoa, mã lớp, mã SV, mã môn) được chọn bằng ComboBox nên không nhập sai mã.
 
-## 🛠 Công nghệ
+## Công nghệ
 
 - Java 11 trở lên (Swing, JDBC)
 - SQL Server (Express / Developer đều được)
 - Maven (quản lý thư viện `mssql-jdbc`)
 
-## 🗂 Cấu trúc thư mục
+## Cấu trúc thư mục
 
 ```
 QuanLySinhVien/
@@ -35,17 +35,17 @@ QuanLySinhVien/
 ├── .gitignore
 ├── pom.xml                         # Cấu hình Maven
 ├── database/
-│   ├── 01_create_tables.sql        # Tạo database + 6 bảng
-│   └── 02_sample_data.sql          # Dữ liệu mẫu
+│   ├──SQL_DoAnQuanLySinhVien.sql         # Tạo database + 6 bảng
+│   └──ThemDuLieu.sql         # Thêm dữ liệu cho các bảng
 ├── docs/
 │   └── ThietKe_CoSoDuLieu_QuanLySinhVien.docx   # Báo cáo thiết kế CSDL
 └── src/main/java/qlsv/
     ├── Main.java                   # Điểm khởi chạy
     ├── db/
-    │   └── DBConnection.java       # Kết nối SQL Server
+    │   └── KetNoiSQLSever.java       # Kết nối SQL Server
     └── ui/
-        ├── Field.java              # Mô tả 1 cột dữ liệu
-        ├── CrudPanel.java          # Panel dùng chung: form + bảng + Thêm/Sửa/Xóa/Tìm
+        ├── SetCotDuLieu.java              # Mô tả 1 cột dữ liệu
+        ├── FromGiaoDien.java          # Panel dùng chung: form + bảng + Thêm/Sửa/Xóa/Tìm
         ├── LoginForm.java          # Form đăng nhập
         ├── MainForm.java           # Form chính (các tab)
         ├── SinhVienPanel.java
@@ -105,23 +105,14 @@ mvn compile exec:java
 **Cách 2 – IDE (NetBeans / IntelliJ / Eclipse):**
 Chọn *Open Project* → chọn thư mục dự án (nhận dạng là Maven project) → chuột phải `Main.java` → *Run*.
 
-### Tài khoản đăng nhập mẫu
+### Tài khoản đăng nhập có sẵn
 
 | Tên đăng nhập | Mật khẩu |
 |---------------|----------|
 | admin | 123456 |
-| trang | 123 |
-
-## ❓ Lỗi thường gặp
-
-| Lỗi | Cách xử lý |
-|-----|-----------|
-| `Login failed for user 'sa'` | Sai mật khẩu, hoặc SQL Server chưa bật chế độ *SQL Server and Windows Authentication* và chưa Enable tài khoản `sa`. |
-| `The TCP/IP connection to the host localhost, port 1433 has failed` | Mở *SQL Server Configuration Manager* → *Network Configuration* → bật **TCP/IP** (port 1433) → khởi động lại dịch vụ SQL Server. |
-| `Cannot open database "QLSinhVien_HuyenTrang"` | Chưa chạy file `01_create_tables.sql`. |
-| Chữ tiếng Việt bị lỗi font | Đặt encoding của project là **UTF-8** (Maven đã cấu hình sẵn). |
-| Lỗi nhập ngày | Nhập đúng định dạng `yyyy-MM-dd`, ví dụ `2005-03-12`. |
+| trang | 12345 |
+| Nam | 1234 |
 
 ## 📝 Ghi chú
-- Mật khẩu lưu dạng văn bản thường theo thiết kế CSDL của đồ án (không mã hóa) – chỉ phù hợp mục đích học tập.
+- Mật khẩu lưu dạng văn bản thường theo thiết kế CSDL của đồ án (không mã hóa)
 - Khi xóa khoa/lớp/sinh viên/môn học đang có dữ liệu liên quan, hệ thống sẽ báo lỗi ràng buộc khóa ngoại (cần xóa dữ liệu con trước).
