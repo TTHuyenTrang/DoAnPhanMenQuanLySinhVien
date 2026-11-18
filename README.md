@@ -27,7 +27,7 @@ Mọi tab đều có: **Thêm, Sửa, Xóa, Làm mới, Tìm kiếm** (tìm theo
 - SQL Server (Express / Developer đều được)
 - Maven (quản lý thư viện `mssql-jdbc`)
 
-## Cấu trúc thư mục
+## Cấu trúc 
 
 ```
 QuanLySinhVien/
@@ -37,8 +37,6 @@ QuanLySinhVien/
 ├── database/
 │   ├──SQL_DoAnQuanLySinhVien.sql         # Tạo database + 6 bảng
 │   └──ThemDuLieu.sql         # Thêm dữ liệu cho các bảng
-├── docs/
-│   └── ThietKe_CoSoDuLieu_QuanLySinhVien.docx   # thiết kế CSDL
 └── src/main/java/qlsv/
     ├── Main.java                   # Điểm khởi chạy
     ├── db/
